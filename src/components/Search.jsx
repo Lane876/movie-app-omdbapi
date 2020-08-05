@@ -6,7 +6,7 @@ import { useStyles } from "../styles";
 const Search = ({ handleInput, searchQuery, handleYear, handlePlot }) => {
   const classes = useStyles();
   return (
-    <div className={classes.searchContainer}>
+    <div className={classes.searchContainer} className='searchContainer'>
       <input
         type="search"
         placeholder="by title..."

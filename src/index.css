@@ -5,10 +5,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #80deea;
+  background-color: #0000;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.searchContainer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem auto;
+  align-items: center;
+}
+@media only screen and (max-width: 620px) {
+
+  .searchContainer{
+    display: flex;
+    flex-direction: column;
+  }
+
 }
