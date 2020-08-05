@@ -15,7 +15,7 @@ import {
   sortTypeDes,
   sortTypeAsc,
 } from "../redux/resultAction";
-import bg from '../image/cinema2.jpg'
+import bg from "../image/cinema2.jpg";
 
 const Home = ({
   res,
@@ -80,10 +80,9 @@ const Home = ({
 
   return (
     <div>
-
       <Typography className={classes.bannerText} color="primary">
-        <a href="/" style={{textDecoration:'none', color:'white'}}>
-        SEARCH MOVIES...
+        <a href="/" style={{ textDecoration: "none", color: "white" }}>
+          SEARCH MOVIES...
         </a>
       </Typography>
       <Search
@@ -92,63 +91,69 @@ const Home = ({
         handleYear={handleYear}
         handlePlot={handlePlot}
       />
-      <img src={bg} alt="bg" className={classes.cinema}/>
-      {res.length > 0 && <div className={classes.homeNavigation}>
-        <div style={{ display: "flex" }}>
-          <div className={classes.homeNavItems}>
-            <Typography>Sort by Title</Typography>
-            <div>
-              <Button onClick={handleTitleAsc} disabled={res.length < 1}>
-                <ArrowUpwardIcon style={{color:'white'}} />
-              </Button>
-              <Button onClick={handleTitleDes} disabled={res.length < 1}>
-                <ArrowDownwardIcon style={{color:'white'}} />
-              </Button>
+      <img src={bg} alt="bg" className={classes.cinema} />
+      {res.length > 0 && (
+        <div className={classes.homeNavigation}>
+          <div style={{ display: "flex" }}>
+            <div className={classes.homeNavItems}>
+              <Typography>Sort by Title</Typography>
+              <div>
+                <Button onClick={handleTitleAsc} disabled={res.length < 1}>
+                  <ArrowUpwardIcon style={{ color: "white" }} />
+                </Button>
+                <Button onClick={handleTitleDes} disabled={res.length < 1}>
+                  <ArrowDownwardIcon style={{ color: "white" }} />
+                </Button>
+              </div>
             </div>
-          </div>
-          <div className={classes.homeNavItems}>
-            <Typography>Sort by Year</Typography>
-            <div>
-              <Button onClick={handleYearAsc} disabled={res.length < 1}>
-                <ArrowUpwardIcon style={{color:'white'}} />
-              </Button>
-              <Button onClick={handleYearDes} disabled={res.length < 1}>
-                <ArrowDownwardIcon style={{color:'white'}} />
-              </Button>
+            <div className={classes.homeNavItems}>
+              <Typography>Sort by Year</Typography>
+              <div>
+                <Button onClick={handleYearAsc} disabled={res.length < 1}>
+                  <ArrowUpwardIcon style={{ color: "white" }} />
+                </Button>
+                <Button onClick={handleYearDes} disabled={res.length < 1}>
+                  <ArrowDownwardIcon style={{ color: "white" }} />
+                </Button>
+              </div>
             </div>
-          </div>
-          <div className={classes.homeNavItems}>
-            <Typography>Sort by imdbID</Typography>
-            <div>
-              <Button onClick={handleImdbidAsc} disabled={res.length < 1}>
-                <ArrowUpwardIcon style={{color:'white'}} />
-              </Button>
-              <Button onClick={handleImdbidDes} disabled={res.length < 1}>
-                <ArrowDownwardIcon style={{color:'white'}} />
-              </Button>
+            <div className={classes.homeNavItems}>
+              <Typography>Sort by imdbID</Typography>
+              <div>
+                <Button onClick={handleImdbidAsc} disabled={res.length < 1}>
+                  <ArrowUpwardIcon style={{ color: "white" }} />
+                </Button>
+                <Button onClick={handleImdbidDes} disabled={res.length < 1}>
+                  <ArrowDownwardIcon style={{ color: "white" }} />
+                </Button>
+              </div>
             </div>
-          </div>
-          <div className={classes.homeNavItems}>
-            <Typography>Sort by Type</Typography>
-            <div>
-              <Button onClick={handleTypeAsc} disabled={res.length < 1}>
-                <ArrowUpwardIcon style={{color:'white'}} />
-              </Button>
-              <Button onClick={handleTypeDes} disabled={res.length < 1}>
-                <ArrowDownwardIcon style={{color:'white'}}/>
-              </Button>
+            <div className={classes.homeNavItems}>
+              <Typography>Sort by Type</Typography>
+              <div>
+                <Button onClick={handleTypeAsc} disabled={res.length < 1}>
+                  <ArrowUpwardIcon style={{ color: "white" }} />
+                </Button>
+                <Button onClick={handleTypeDes} disabled={res.length < 1}>
+                  <ArrowDownwardIcon style={{ color: "white" }} />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
-      </div>}
+      )}
       {loading ? (
         <CircularProgress
           style={{ display: "flex", justifyContent: "center" }}
         />
       ) : (
         <div className={classes.homeResult}>
-          {err ? (
-            <Typography variant="h3" color="secondary" style={{fontWeight:'900'}}>
+          {err.length ? (
+            <Typography
+              variant="h3"
+              color="secondary"
+              style={{ fontWeight: "900" }}
+            >
               {err}
             </Typography>
           ) : (
@@ -163,13 +168,13 @@ const Home = ({
         <div className={classes.loadMoreBtn}>
           <Button
             fullWidth
-            disabled={res.length < 9}
+            disabled={err}
             onClick={load}
             variant="contained"
             color="primary"
             className={classes.loadBtn}
           >
-            {res.length < 10 ? "Nothing to load" : "Load more movies"}
+            Load more movies
           </Button>
         </div>
       )}

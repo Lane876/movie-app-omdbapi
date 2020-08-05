@@ -45,25 +45,30 @@ function App() {
       setCurrentPage(currentPage + 1);
       const response = data.data.Search;
       dispatch(getResults([...res, ...response]));
+      dispatch(getError(false));
     } catch (error) {
-      console.log(error);
+      dispatch(getError(error));
     }
   };
 
   function handleInput(event) {
     setSearch(event.target.value);
-    setCurrentPage(1)
+    setCurrentPage(1);
     dispatch(getResults([]));
     dispatch(getError(false));
   }
 
   function handleYear(e) {
     setYear(e.target.value);
+    dispatch(getResults([]));
+    setCurrentPage(1);
+    dispatch(getError(false));
   }
 
   function handlePlot(e) {
     let plot = e.target.value;
     dispatch(getPlot(plot));
+    dispatch(getError(false));
   }
 
   return (
