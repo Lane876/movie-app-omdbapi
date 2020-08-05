@@ -30,6 +30,7 @@ const Search = ({ handleInput, searchQuery, handleYear, handlePlot }) => {
         variant="contained"
         color="primary"
         className={classes.searchBtn}
+        style={{margin:"2px"}}
       >
         <SearchIcon onClick={searchQuery} />
       </Button>

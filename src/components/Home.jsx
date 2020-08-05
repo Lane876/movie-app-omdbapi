@@ -81,7 +81,7 @@ const Home = ({
   return (
     <div>
       <a href="/" style={{ textDecoration: "none", color: "white" }}>
-        <Typography className={classes.bannerText}>
+        <Typography style={{fontWeight:"900", fontSize:'2rem', textAlign:"center", padding:"2rem"}}>
           SEARCH MOVIES...
         </Typography>
       </a>
