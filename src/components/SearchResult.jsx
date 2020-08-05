@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import MovieDetails from "./MovieDetails";
+import { useStyles } from "../styles";
 
 const SearchResult = ({ res }) => {
-
+  const classes = useStyles()
   const movieId = res.imdbID
   return (
-    <div style={{ margin: "3px" }}>
+    <div style={{ margin: "5px" }}>
       <Link to={`/${movieId}`}>
       <img
         src={res.Poster}
         alt="poster"
-        style={{ maxWidth: "100%", maxHeight: "500px", borderRadius: "3px" }}
+        className={classes.resultItem}
       />
       </Link>
 

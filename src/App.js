@@ -8,40 +8,54 @@ import MovieDetails from "./components/MovieDetails";
 import { apiKey } from "./config";
 import { useSelector, useDispatch } from "react-redux";
 import { getPlot } from "./redux/plotAction";
+import { getError } from "./redux/errorAction";
+import { getResults } from "./redux/resultAction";
 
 function App() {
-  const movieplot = useSelector(state=>state.plot)
-  console.log(movieplot);
-  const dispatch = useDispatch()
-  
+  const res = useSelector((state) => state.results.results);
+  const dispatch = useDispatch();
+
   const [search, setSearch] = useState("");
-  const [error, setError] = useState("");
-  const [result, setResult] = useState([]);
-  const [count, setCount] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
   const [year, setYear] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const searchQuery = async () => {
+    setLoading(true);
     try {
-      const data = await Axios.post(
-        apiKey + "&s=" + search + "&y=" + year + `&page=${count}`
+      const data = await Axios.get(
+        apiKey + "&s=" + search + "&y=" + year + `&page=${currentPage}`
+        // apiKey + "&s=" + search + "&y=" + year + `&page=${currentPage}`
       );
+      setCurrentPage(currentPage + 1);
+
       let results = data.data.Search;
-      console.log(results);
-      setResult([...result, ...results]);
-    } catch ({ error }) {
-      setError(error);
+      setLoading(false);
+      dispatch(getResults([...res, ...results]));
+    } catch (error) {
+      dispatch(getError("MOVIE NOT FOUND..."));
+      setLoading(false);
+    }
+  };
+
+  const load = async () => {
+    try {
+      const data = await Axios.get(
+        apiKey + "&s=" + search + "&y=" + year + `&page=${currentPage}`
+      );
+      setCurrentPage(currentPage + 1);
+      const response = data.data.Search;
+      dispatch(getResults([...res, ...response]));
+    } catch (error) {
       console.log(error);
     }
   };
 
-  function load() {
-    setCount(count + 1);
-    searchQuery(count);
-  }
-
   function handleInput(event) {
     setSearch(event.target.value);
-
+    setCurrentPage(1)
+    dispatch(getResults([]));
+    dispatch(getError(false));
   }
 
   function handleYear(e) {
@@ -50,7 +64,7 @@ function App() {
 
   function handlePlot(e) {
     let plot = e.target.value;
-      dispatch(getPlot(plot))
+    dispatch(getPlot(plot));
   }
 
   return (
@@ -58,8 +72,8 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home
-            error={error}
-            result={result}
+            res={res}
+            loading={loading}
             SearchResult={SearchResult}
             load={load}
             handleInput={handleInput}

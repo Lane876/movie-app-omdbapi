@@ -6,61 +6,50 @@ import { Typography, Button } from "@material-ui/core";
 import { apiKey } from "../config";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import { useSelector } from "react-redux";
+import bg from "../image/cinema2.jpg";
 
 const MovieDetails = (props) => {
-  const plot = useSelector(state=>state.plot)
+  const plot = useSelector((state) => state.plot.plot);
   const classes = useStyles();
   const [result, setResult] = useState("");
-  console.log(props);
   const id = props.match.params.movieId;
-  
+
   useEffect(() => {
     const getDetails = async () => {
       const result = await Axios.get(apiKey + "&i=" + id + "&plot=" + plot);
-      console.log(result);
       const res = result.data;
       setResult(res);
     };
     getDetails();
-  }, []);
+  }, [id, plot]);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        width: "70%",
-        margin: "2rem auto",
-        padding: "0.5rem",
-        justifyContent: "center",
-      }}
-    >
-      <div style={{ margin: "1rem", flex: "1" }}>
-        <img src={result.Poster} alt="poster" />
+    <div className={classes.movieDetailsContainer}>
+      <img src={bg} className={classes.cinema} alt="bg" />
+
+      <div style={{ margin: "2rem" }}>
+        <img
+          src={result.Poster}
+          alt="poster"
+          className={classes.moviesDetailsImage}
+        />
       </div>
-      <div
-        style={{
-          flex: "2",
-          maxHeight: "400px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-        }}
-      >
-        <h2>
+      <div className={classes.movieDetailsInfo}>
+        <h2 style={{ color: "white", marginBottom: "1rem" }}>
           {result.Title} {result.Year}
         </h2>
-        <Typography>
+        <Typography style={{ color: "white", marginBottom: "1rem" }}>
           <strong>Genre:</strong> {result.Genre}
         </Typography>
-        <Typography>
+        <Typography style={{ color: "white", marginBottom: "1rem" }}>
           <strong>Movie Plot:</strong> {result.Plot}
         </Typography>
-        <Typography>
+        <Typography style={{ color: "white", marginBottom: "1rem" }}>
           <strong>Cast:</strong> {result.Actors}
         </Typography>
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
           <Button
+            style={{ width: "100px", marginBottom: "1rem" }}
             variant="contained"
             color="primary"
             onClick={() => props.history.push("/")}

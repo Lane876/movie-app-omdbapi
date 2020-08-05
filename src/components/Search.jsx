@@ -1,57 +1,36 @@
 import React from "react";
 import SearchIcon from "@material-ui/icons/Search";
-import { Button, FormControl, InputLabel, Select } from "@material-ui/core";
+import { Button } from "@material-ui/core";
+import { useStyles } from "../styles";
 
 const Search = ({ handleInput, searchQuery, handleYear, handlePlot }) => {
+  const classes = useStyles();
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        width: "100%",
-        margin: "1rem auto",
-      }}
-    >
+    <div className={classes.searchContainer}>
       <input
         type="search"
-        placeholder="By title"
+        placeholder="By title..."
         onChange={handleInput}
-        style={{
-          minWidth: "20%",
-          height: "40px",
-          padding: "5px",
-          border: "1px solid lightblue",
-          outlineColor: "palegreen",
-          alignItems: "center",
-          fontSize: "1rem",
-          textAlign: "center",
-          borderRadius: "3px",
-          marginBottom:'2rem',
-          margin:'2px'
-        }}
+        className={classes.searchInput}
       />
-      <input type="number" placeholder='by year...' onChange={handleYear} style={{
-          width: "100px",
-          height: "40px",
-          padding: "5px",
-          border: "1px solid lightblue",
-          outlineColor: "palegreen",
-          alignItems: "center",
-          fontSize: "1rem",
-          textAlign: "center",
-          borderRadius: "3px",
-          margin:'2px',
-          marginBottom:'2rem',
+      <input
+        type="number"
+        placeholder="by year..."
+        onChange={handleYear}
+        className={classes.searchYear}
+      />
 
-        }}/>
-   
-          
-        <select  onChange={handlePlot} style={{height:"40px", margin:'2px', borderRadius:"3px"}}>
-          <option>full</option>
-          <option>short</option>
-        </select>
+      <select onChange={handlePlot} className={classes.selectInfo}>
+        <option>Plot lenght</option>
+        <option>full</option>
+        <option>short</option>
+      </select>
 
-      <Button variant="contained" color="primary" style={{height:'40px', width:'100px',  margin:'2px'}}>
+      <Button
+        variant="contained"
+        color="primary"
+        className={classes.searchBtn}
+      >
         <SearchIcon onClick={searchQuery} />
       </Button>
     </div>

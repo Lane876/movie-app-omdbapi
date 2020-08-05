@@ -1,8 +1,8 @@
 import {createStore, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
-import plotReducer from './plotReducer'
+import rootReducer from './rootReducer'
 
 
-const store = createStore(plotReducer, applyMiddleware(thunk))
+const store = createStore(rootReducer, applyMiddleware(thunk))
 
 export default store
