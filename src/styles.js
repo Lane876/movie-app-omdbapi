@@ -3,8 +3,8 @@ import { makeStyles } from "@material-ui/core";
 export const useStyles = makeStyles((theme) => ({
   cinema: {
     position: "fixed",
-    width: "100%",
-    height: "100%",
+    width: "100vw",
+    height: "100vh",
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",

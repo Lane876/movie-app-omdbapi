@@ -95,6 +95,7 @@ const Home = ({
       {res.length > 0 && (
         <div className={classes.homeNavigation}>
           <div style={{ display: "flex" }}>
+            <div className='media'>
             <div className={classes.homeNavItems}>
               <Typography>Sort by Title</Typography>
               <div>
@@ -117,6 +118,8 @@ const Home = ({
                 </Button>
               </div>
             </div>
+            </div>
+            <div className='media'>
             <div className={classes.homeNavItems}>
               <Typography>Sort by imdbID</Typography>
               <div>
@@ -138,6 +141,7 @@ const Home = ({
                   <ArrowDownwardIcon style={{ color: "white" }} />
                 </Button>
               </div>
+            </div>
             </div>
           </div>
         </div>
