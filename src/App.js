@@ -25,7 +25,6 @@ function App() {
     try {
       const data = await Axios.get(
         apiKey + "&s=" + search + "&y=" + year + `&page=${currentPage}`
-        // apiKey + "&s=" + search + "&y=" + year + `&page=${currentPage}`
       );
       setCurrentPage(currentPage + 1);
 
