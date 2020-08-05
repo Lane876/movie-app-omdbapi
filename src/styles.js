@@ -20,7 +20,7 @@ export const useStyles = makeStyles((theme) => ({
     boxShadow: "0px 0px 20px 0px rgba(13,28,227,1)",
   },
 
-  moviesDetailsImage:{
+  moviesDetailsImage: {
     webkitBoxShadow: " 0px 0px 20px 0px rgba(13,28,227,1)",
     mozBoxShadow: " 0px 0px 20px 0px rgba(13,28,227,1)",
     boxShadow: "0px 0px 20px 0px rgba(13,28,227,1)",
@@ -31,6 +31,8 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "2rem",
     padding: "2rem",
     color: "white",
+    fontWeight: "900",
+    fontSize: "2rem",
   },
   homeResult: {
     display: "flex",
@@ -72,14 +74,14 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    padding:'1rem',
+    padding: "1rem",
   },
   searchContainer: {
     display: "flex",
     justifyContent: "center",
     width: "100%",
     margin: "1rem auto",
-    alignItems:'center'
+    alignItems: "center",
   },
   searchInput: {
     minWidth: "300px",
@@ -112,7 +114,7 @@ export const useStyles = makeStyles((theme) => ({
     outlineColor: "palegreen",
     borderColor: "lightblue",
     fontSize: "1rem",
-    color:"gray"
+    color: "gray",
   },
   searchBtn: {
     height: "40px",
