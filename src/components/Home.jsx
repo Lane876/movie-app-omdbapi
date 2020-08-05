@@ -80,8 +80,8 @@ const Home = ({
 
   return (
     <div>
-      <a href="/" style={{ textDecoration: "none", color: "white" }}>
-        <Typography className={classes.bannerText} color="primary">
+      <a href="/" style={{ textDecoration: "none", color: "white", fontWeight: "900", fontSize: "2rem", }}>
+        <Typography className={classes.bannerText}>
           SEARCH MOVIES...
         </Typography>
       </a>

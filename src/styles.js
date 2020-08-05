@@ -30,7 +30,6 @@ export const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     fontSize: "2rem",
     padding: "2rem",
-    fontWeight: "900",
     color: "white",
   },
   homeResult: {
@@ -118,6 +117,6 @@ export const useStyles = makeStyles((theme) => ({
   searchBtn: {
     height: "40px",
     width: "100px",
-    margin: "2px",
+    margin: "3px",
   },
 }));
