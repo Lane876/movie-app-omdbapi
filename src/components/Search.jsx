@@ -9,7 +9,7 @@ const Search = ({ handleInput, searchQuery, handleYear, handlePlot }) => {
     <div className={classes.searchContainer}>
       <input
         type="search"
-        placeholder="By title..."
+        placeholder="by title..."
         onChange={handleInput}
         className={classes.searchInput}
       />
@@ -21,7 +21,7 @@ const Search = ({ handleInput, searchQuery, handleYear, handlePlot }) => {
       />
 
       <select onChange={handlePlot} className={classes.selectInfo}>
-        <option>Plot lenght</option>
+        <option>plot lenght</option>
         <option>full</option>
         <option>short</option>
       </select>

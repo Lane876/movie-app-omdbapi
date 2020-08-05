@@ -80,11 +80,11 @@ const Home = ({
 
   return (
     <div>
-      <Typography className={classes.bannerText} color="primary">
-        <a href="/" style={{ textDecoration: "none", color: "white" }}>
+      <a href="/" style={{ textDecoration: "none", color: "white" }}>
+        <Typography className={classes.bannerText} color="primary">
           SEARCH MOVIES...
-        </a>
-      </Typography>
+        </Typography>
+      </a>
       <Search
         handleInput={handleInput}
         searchQuery={searchQuery}

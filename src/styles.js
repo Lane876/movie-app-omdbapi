@@ -80,9 +80,10 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     width: "100%",
     margin: "1rem auto",
+    alignItems:'center'
   },
   searchInput: {
-    minWidth: "20%",
+    minWidth: "300px",
     height: "40px",
     padding: "5px",
     border: "1px solid lightblue",
@@ -91,7 +92,6 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "1rem",
     textAlign: "center",
     borderRadius: "3px",
-    marginBottom: "2rem",
     margin: "2px",
   },
   searchYear: {
@@ -112,6 +112,8 @@ export const useStyles = makeStyles((theme) => ({
     borderRadius: "3px",
     outlineColor: "palegreen",
     borderColor: "lightblue",
+    fontSize: "1rem",
+    color:"gray"
   },
   searchBtn: {
     height: "40px",
