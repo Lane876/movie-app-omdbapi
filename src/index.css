@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 body {
@@ -11,14 +10,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  background-image: url(./image/synth.jpg);
-  background-attachment: fixed;
-  background-size:cover;
-  background-position: center center;
-  z-index: -1;
-}
 
+  background-image: url(./image/synth.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  margin: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -34,7 +42,6 @@ code {
 .media {
   display: flex;
 }
-
 
 @media only screen and (max-width: 620px) {
   .searchContainerMedia {
