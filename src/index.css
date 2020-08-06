@@ -1,11 +1,9 @@
-*{
+/* * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+} */
 
 body {
-  
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -16,42 +14,42 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  transform: translate3d(0,0,0); 
-
-  
+  transform: translate3d(0, 0, 0);
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.searchContainerMedia{
+.searchContainerMedia {
   display: flex;
   justify-content: center;
   width: 100%;
   margin: 1rem auto;
   align-items: center;
 }
-.media{
+.media {
   display: flex;
-
 }
 
 @media all and (max-width: 980px) {
   body {
-      padding-top: 0px!important;
-      overflow-x: hidden;
+    padding-top: 0px !important;
+    overflow-x: hidden;
   }
-  }
+}
 
 @media only screen and (max-width: 620px) {
-
-  .searchContainerMedia{
+  .searchContainerMedia {
     display: flex;
     flex-direction: column;
   }
-   
-  .media{
+
+  .media {
     display: flex;
     flex-direction: column;
     margin: 1rem;
