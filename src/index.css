@@ -19,6 +19,13 @@ body {
   
 }
 
+@media only screen and (max-width: 620px){
+  body{
+    overflow-x: hidden;
+    padding: -20px;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
