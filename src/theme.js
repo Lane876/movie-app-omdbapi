@@ -1,7 +1,7 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
-  padding:'-20px',
+  padding:'2rem',
   palette: {
     type: "dark",
     primary: { main: "#F93E73" },
