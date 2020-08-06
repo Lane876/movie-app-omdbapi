@@ -20,8 +20,11 @@ function App() {
   const [year, setYear] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const searchQuery = async () => {
+  const searchQuery = async (e) => {
     setLoading(true);
+    if(e.key === "Enter"){
+
+    
     try {
       const data = await Axios.get(
         apiKey + "&s=" + search + "&y=" + year + `&page=${currentPage}`
@@ -35,6 +38,7 @@ function App() {
       dispatch(getError("MOVIE NOT FOUND..."));
       setLoading(false);
     }
+  }
   };
 
   const load = async () => {

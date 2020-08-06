@@ -6,7 +6,7 @@ import { Typography, Button } from "@material-ui/core";
 import { apiKey } from "../config";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import { useSelector } from "react-redux";
-import bg from "../image/cinema2.jpg";
+// import bg from "../image/synth.jpg";
 
 const MovieDetails = (props) => {
   const plot = useSelector((state) => state.plot.plot);
@@ -25,7 +25,7 @@ const MovieDetails = (props) => {
 
   return (
     <div className={classes.movieDetailsContainer}>
-      <img src={bg} className={classes.cinema} alt="bg" />
+      {/* <img src={bg} className={classes.cinema} alt="bg" /> */}
 
       <div style={{ margin: "2rem" }}>
         <img
@@ -49,7 +49,7 @@ const MovieDetails = (props) => {
         </Typography>
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
           <Button
-            style={{ width: "100px", marginBottom: "1rem" }}
+            style={{ width: "200px", marginBottom: "2rem" }}
             variant="contained"
             color="primary"
             onClick={() => props.history.push("/")}
