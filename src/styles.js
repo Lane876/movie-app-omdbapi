@@ -1,16 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 
 export const useStyles = makeStyles((theme) => ({
-  cinema: {
-    position: "fixed",
-    width: "100vw",
-    height: "100vh",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    // opacity:'.9',
-    zIndex: "-1",
-  },
   resultItem: {
     maxWidth: "100%",
     maxHeight: "500px",
@@ -63,17 +53,18 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     width: "70%",
-    margin: "2rem auto",
-    padding: "0.5rem",
+    height:"100%",
+    marginTop:"2rem",
+    margin: "0 auto",
     justifyContent: "center",
+    alignItems:"center"
   },
   movieDetailsInfo: {
     flex: "2",
-    maxHeight: "400px",
+    height:'400px',
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    padding: "1rem",
   },
   searchContainer: {
     display: "flex",

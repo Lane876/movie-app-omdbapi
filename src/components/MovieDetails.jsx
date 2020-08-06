@@ -44,7 +44,7 @@ const MovieDetails = (props) => {
         <Typography style={{ color: "white", marginBottom: "1rem" }}>
           <strong>Cast:</strong> {result.Actors}
         </Typography>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ display: "flex", justifyContent: "center", padding:'3rem' }}>
           <Button
             fullWidth
             variant="contained"
