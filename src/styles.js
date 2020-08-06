@@ -44,7 +44,7 @@ export const useStyles = makeStyles((theme) => ({
     padding: "1rem",
   },
   loadBtn: {
-    maxWidth: "400px",
+    maxWidth: "90%",
     height: "40px",
   },
   homeNavigation: {

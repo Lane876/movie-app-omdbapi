@@ -87,7 +87,7 @@ const Home = ({
             padding: "2rem",
           }}
         >
-          SEARCH MOVIES...
+          SEARCH MOVIES
         </Typography>
       </a>
       <Search
