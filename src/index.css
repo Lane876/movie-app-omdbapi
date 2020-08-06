@@ -14,8 +14,8 @@ body {
   
   background-image: url(./image/synth.jpg);
   background-attachment: fixed;
-  background-size:cover 100%;
-  background-position: center;
+  background-size:cover;
+  background-position: center center;
   
 }
 
