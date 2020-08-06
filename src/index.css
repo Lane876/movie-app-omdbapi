@@ -34,7 +34,15 @@ code {
 }
 .media{
   display: flex;
+
 }
+
+@media all and (max-width: 980px) {
+  body {
+      padding-top: 0px!important;
+      overflow-x: hidden;
+  }
+  }
 
 @media only screen and (max-width: 620px) {
 
