@@ -52,8 +52,7 @@ export const useStyles = makeStyles((theme) => ({
   movieDetailsContainer: {
     display: "flex",
     flexWrap: "wrap",
-    width: "70%",
-    height:"100%",
+    // width: "70%",
     marginTop:"2rem",
     margin: "0 auto",
     justifyContent: "center",

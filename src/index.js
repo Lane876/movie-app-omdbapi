@@ -4,18 +4,18 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
-import { MuiThemeProvider, CssBaseline } from "@material-ui/core";
-import theme from "./theme";
+// import { MuiThemeProvider, CssBaseline } from "@material-ui/core";
+// import theme from "./theme";
 import {Provider} from 'react-redux'
 import store from "./redux/store";
 
 ReactDOM.render(
   <Provider store={store}>
   <BrowserRouter>
-    <MuiThemeProvider theme={theme}>
-      <CssBaseline />
+    {/* <MuiThemeProvider theme={theme}>
+      <CssBaseline /> */}
       <App />
-    </MuiThemeProvider>
+    {/* </MuiThemeProvider> */}
   </BrowserRouter>
   </Provider>,
   document.getElementById("root")

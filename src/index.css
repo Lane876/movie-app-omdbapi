@@ -14,14 +14,6 @@ body {
   background-image: url(./image/synth.jpg);
   background-position: center center;
   background-attachment: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  margin: 0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
