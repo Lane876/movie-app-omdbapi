@@ -1,12 +1,12 @@
 import { makeStyles } from "@material-ui/core";
 
 export const useStyles = makeStyles((theme) => ({
-  // bg:{
-  //   position:"fixed",
-  //   zIndex:"-100",
-  //   // width:'100%',
-  //   // height:"auto"
-  // },
+  bg:{
+    position:"fixed",
+    zIndex:"-100",
+    // width:'100%',
+    // height:"auto"
+  },
 
   
 

@@ -6,7 +6,7 @@ import { Typography, Button } from "@material-ui/core";
 import { apiKey } from "../config";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import { useSelector } from "react-redux";
-// import bg from '../image/synth2.jpg'
+import bg from '../image/synth2.jpg'
 
 const MovieDetails = (props) => {
   const plot = useSelector((state) => state.plot.plot);
@@ -26,7 +26,7 @@ const MovieDetails = (props) => {
 
   return (
     <div className={classes.movieDetailsContainer}>
-      {/* <img src={bg} className={classes.bg}/> */}
+      <img src={bg} className={classes.bg}/>
       <div style={{ margin: "2rem" }}>
         <img
           src={result.Poster}
