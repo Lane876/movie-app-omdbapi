@@ -4,16 +4,11 @@ export const useStyles = makeStyles((theme) => ({
   // bg:{
   //   position:"fixed",
   //   zIndex:"-100",
-  //   width:'100%',
-  //   height:"auto"
+  //   // width:'100%',
+  //   // height:"auto"
   // },
 
-  // bgHome:{
-  //   position:"cover",
-  //   zIndex:"-100",
-  //   width:'100%',
-  //   height:"auto"
-  // },
+  
 
 
 
