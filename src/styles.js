@@ -1,6 +1,15 @@
 import { makeStyles } from "@material-ui/core";
 
 export const useStyles = makeStyles((theme) => ({
+  bg:{
+    position:"fixed",
+    zIndex:"-100",
+    // width:'100%',
+    // height:"auto"
+  },
+
+
+
   resultItem: {
     maxWidth: "100%",
     maxHeight: "500px",

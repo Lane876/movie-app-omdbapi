@@ -15,6 +15,9 @@ import {
   sortTypeDes,
   sortTypeAsc,
 } from "../redux/resultAction";
+import bg from '../image/synth2.jpg'
+
+
 
 const Home = ({
   res,
@@ -79,6 +82,7 @@ const Home = ({
 
   return (
     <div>
+      <img src={bg} className={classes.bg}/>
       <a href="/" style={{ textDecoration: "none", color: "white" }}>
         <Typography variant='h3'
           style={{
