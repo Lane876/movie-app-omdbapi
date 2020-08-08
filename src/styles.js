@@ -32,10 +32,12 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     padding: "1rem",
+    maxWidth:"500px",
+    margin:"1rem auto",
+    
   },
   loadBtn: {
-    maxWidth: "90%",
-    height: "40px",
+    // color:"#F93E73"
   },
   homeNavigation: {
     display: "flex",
@@ -52,9 +54,8 @@ export const useStyles = makeStyles((theme) => ({
   movieDetailsContainer: {
     display: "flex",
     flexWrap: "wrap",
-    // width: "70%",
-    marginTop:"2rem",
-    margin: "0 auto",
+    width: "90%",
+    margin: "3rem auto",
     justifyContent: "center",
     alignItems:"center"
   },
@@ -74,8 +75,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   searchInput: {
     minWidth: "300px",
-    height: "40px",
-    padding: "5px",
+    padding: "1rem",
     border: "1px solid lightblue",
     outlineColor: "#F93E73",
     alignItems: "center",
@@ -86,8 +86,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   searchYear: {
     width: "100px",
-    height: "40px",
-    padding: "5px",
+    padding: "1rem",
     border: "1px solid lightblue",
     outlineColor: "#F93E73",
     alignItems: "center",
@@ -97,7 +96,7 @@ export const useStyles = makeStyles((theme) => ({
     margin: "2px",
   },
   selectInfo: {
-    height: "40px",
+    padding:"1rem",
     margin: "2px",
     borderRadius: "3px",
     outlineColor: "#F93E73",

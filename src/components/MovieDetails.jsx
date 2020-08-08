@@ -12,6 +12,7 @@ const MovieDetails = (props) => {
   const classes = useStyles();
   const [result, setResult] = useState("");
   const id = props.match.params.movieId;
+  console.log(result);
 
   useEffect(() => {
     const getDetails = async () => {
@@ -39,16 +40,25 @@ const MovieDetails = (props) => {
           <strong>Genre:</strong> {result.Genre}
         </Typography>
         <Typography style={{ color: "white", marginBottom: "1rem" }}>
+          <strong>Imdb rating:</strong> {result.imdbRating}
+        </Typography>
+        <Typography style={{ color: "white", marginBottom: "1rem" }}>
           <strong>Movie Plot:</strong> {result.Plot}
         </Typography>
         <Typography style={{ color: "white", marginBottom: "1rem" }}>
           <strong>Cast:</strong> {result.Actors}
         </Typography>
+        <Typography style={{ color: "white", marginBottom: "1rem" }}>
+          <strong>Director:</strong> {result.Director}
+        </Typography>
+        <Typography style={{ color: "white", marginBottom: "1rem" }}>
+          <strong>Awards:</strong> {result.Awards}
+        </Typography>
         <div style={{ display: "flex", justifyContent: "center", padding:'3rem' }}>
           <Button
             fullWidth
             variant="contained"
-            color="primary"
+            color="secondary"
             onClick={() => props.history.push("/")}
           >
             <ArrowBackIcon />

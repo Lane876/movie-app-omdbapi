@@ -183,8 +183,8 @@ const Home = ({
             disabled={err}
             onClick={load}
             variant="contained"
-            color="primary"
             className={classes.loadBtn}
+            color="secondary"
           >
             {err ? "Nothing to load" : "Load more movies"}
           </Button>
